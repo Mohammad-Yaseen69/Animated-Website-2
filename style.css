@@ -42,7 +42,12 @@ main {
     letter-spacing: -10px;
     margin-bottom: 2vw;
 }
-
+.main-heading{
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 nav {
     width: 100%;
     height: 150px;
@@ -61,6 +66,10 @@ nav {
     height: 40px;
     gap: 70px;
     position: relative;
+}
+
+.links-main {
+    display: flex;
 }
 
 .links p {
@@ -119,7 +128,7 @@ nav {
     justify-content: space-between;
 }
 
-.elements{
+.elements {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -129,19 +138,52 @@ nav {
     height: 100%;
     width: 30%;
 }
+
+
+.page2 div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
 .elem img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.page2 div{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 1vw;
-    border-bottom: 1px solid black;
-}
-.page2 div h5{
+
+.page2 div h5 {
     font-family: futura;
     color: #5c5c5c;
+}
+
+@media screen and (max-width:740px) {
+    .page1{
+        min-height: 80vh;
+    }
+    .page1 div h1 {
+        font-size: 14vw;
+        font-family: futura;
+        text-align: center;
+        line-height: 0%;
+        letter-spacing: 0px;
+        margin-bottom: 0;
+    }
+
+    .video-container video {
+        height: 40vh;
+    }
+
+    .elements {
+        flex-direction: column;
+    }
+
+    .elements .elem {
+        width: 100%;
+    }
+
+    nav .links-main {
+        display: none;
+    }
 }

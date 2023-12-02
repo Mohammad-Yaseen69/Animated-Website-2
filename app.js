@@ -46,6 +46,12 @@ function loadingAnimation() {
         delay: 0.8,
         duration: 0.9,
     })
+    gsap.from('.page2', {
+        y: 30,
+        opacity: 0,
+        delay: 1.2,
+        duration: 0.9,
+    })
 }
 
 
