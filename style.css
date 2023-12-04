@@ -123,19 +123,27 @@ nav {
 .page2 {
     width: 100%;
     min-height: 100vh;
-    /* margin: 4vw 0; */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
+.page2 div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
 .elements {
     display: flex;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: none;
     align-items: center;
+    border-bottom: 1px solid blue;
 }
 
 .elements .elem {
@@ -149,12 +157,9 @@ nav {
 }
 
 
-.page2 div {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-bottom: 1px solid black;
+.page2 div h5 {
+    font-family: futura;
+    color: #5c5c5c;
 }
 
 .elem img {
@@ -163,10 +168,6 @@ nav {
     object-fit: cover;
 }
 
-.page2 div h5 {
-    font-family: futura;
-    color: #5c5c5c;
-}
 
 .details {
     position: absolute;
