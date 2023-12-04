@@ -141,6 +141,11 @@ nav {
 .elements .elem {
     height: 40vw;
     width: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 
@@ -163,10 +168,88 @@ nav {
     color: #5c5c5c;
 }
 
+.details {
+    position: absolute;
+    max-width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.details div {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    z-index: 3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.details div i {
+    font-size: 12px;
+}
+
+.details::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: 10px 40px, 100% 40px;
+    transition: all 0.2s;
+    border-radius: 25px;
+}
+
+#dets1 {
+    background-color: #E5F0D6;
+}
+
+#dets1::before {
+    background-color: #E5F0D6;
+    background-image: url('https://cdn.sanity.io/images/w8f1ak3c/production/6a73d4df28963d86c7f9dd49f805b8ec84774bd5-4672x7008.png/DSC0069_Dexter%20Kim%20copy.png?rect=0,515,4672,5241&fp-x=0.5&fp-y=0.44735661764705875&w=320&h=359&fit=crop&crop=focalpoint&auto=format'), url("https://cdn.sanity.io/images/w8f1ak3c/production/d6c7e5bbcf3445fccb7e221bc5b1b9fd94d83362-5000x5000.png/DSC0032_Dexter%20Kim.png?w=320&h=320&auto=format");
+
+}
+
+#dets2 {
+    background-color: #f5dfcf;
+}
+
+#dets2::before {
+    background-color: #f5dfcf;
+    background-image: url('https://cdn.sanity.io/images/w8f1ak3c/production/3ab2d63c7e5ce5b1d39a1880e2a274771573ccbe-5000x5000.png/DSC0058_Dexter%20Kim.png?rect=12,478,4988,4314&fp-x=0.5012254901960784&fp-y=0.5269607843137255&w=320&h=277&fit=crop&crop=focalpoint&auto=format'), url("https://cdn.sanity.io/images/w8f1ak3c/production/f1fa7f03dfd062ba551730e16a75d682058e6ed8-6241x4161.png/DSC0002_Dexter%20Kim.png?rect=1710,1262,3516,2888&fp-x=0.5556506849315068&fp-y=0.6504072565716401&w=320&h=263&fit=crop&crop=focalpoint&auto=format");
+}
+
+#dets3 {
+    background-color: white;
+}
+
+#dets3::before {
+    background-color: white;
+    background-image: url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format") ,  url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format");
+}
+
+.details:hover::before {
+    height: 200px;
+}
+
+/* -------------------------------->  Page 2 complete <---------------------------------- */
+
+
+.page3 {
+    height: 100vh;
+}
+
 @media screen and (max-width:800px) {
     .page1 {
         min-height: 120vh;
     }
+
     .page1 div h1 {
         font-size: 14vw;
         font-family: futura;
@@ -175,9 +258,11 @@ nav {
         letter-spacing: 0px;
         margin-bottom: 0;
     }
-    .video-container{
+
+    .video-container {
         pointer-events: none;
     }
+
     .video-container video {
         height: 50vh;
     }
@@ -187,24 +272,27 @@ nav {
         align-items: center;
         justify-content: center;
     }
+
     .elements .elem {
-       width: 100%;
-       height: 100vw;
+        width: 100%;
+        height: 100vw;
     }
+
     nav .links-main {
         display: none;
     }
+
     .video-container div {
         padding: 6vw 4vw;
         font-size: 20px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50% , -50%);
+        transform: translate(-50%, -50%);
         opacity: 1;
         scale: 1;
     }
-    
+
 }
 
 @media screen and (max-width:550px) {

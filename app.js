@@ -8,7 +8,7 @@ function homeVideoAnimation() {
 
         })
     })
-    homeVideo.addEventListener('mouseleave', () => {
+    homeVideo.addEventListener('mouseleave', (dets) => {
         gsap.to(playDiv, {
             opacity: 0,
             scale: 0,
