@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: #f7f7f7;
 }
 
 @font-face {
@@ -22,16 +23,18 @@ body {
 
 main {
     background-color: #f7f7f7;
-    padding: 0px 20px;
+    padding: 2px 20px;
+    position: relative;
+    margin-top: 70px;
 }
 
 .page1 {
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 
 .page1 h1 {
@@ -52,14 +55,20 @@ main {
 
 nav {
     width: 100%;
-    height: 150px;
-    padding: 30px 0px;
+    padding: 10px 20px;
+    z-index: 332;
+    position: sticky;
+    left: 0px;
+    top: 10px;
     display: flex;
     justify-content: space-between;
 }
-
-.nav-icon img {
-    width: 130px;
+.nav-icon{
+    height: 83px;
+    overflow: hidden;
+}
+.nav-icon svg {
+    display: block;
 }
 
 .links {
@@ -67,11 +76,13 @@ nav {
     align-items: center;
     height: 40px;
     gap: 70px;
+    font-size: 10px;
     position: relative;
 }
 
 .links-main {
     display: flex;
+    gap: 70px;
 }
 
 .links p {
@@ -79,9 +90,7 @@ nav {
     font-weight: 500;
 }
 
-.links div {
-    position: sticky;
-    top: 10px;
+.icons {
     display: flex;
     gap: 70px;
     background-color: #f7f7f7;
@@ -92,7 +101,7 @@ nav {
     height: 35px;
 }
 
-.links div i {
+.icons i {
     font-size: 20px;
 }
 
@@ -135,9 +144,11 @@ nav {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.page2-heading{
+
+.page2-heading {
     border-bottom: 1px solid black;
 }
+
 .elements {
     display: flex;
     width: 100%;
@@ -232,7 +243,7 @@ nav {
 
 #dets3::before {
     background-color: white;
-    background-image: url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format") ,  url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format");
+    background-image: url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format"), url("https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format");
 }
 
 .details:hover::before {
@@ -247,49 +258,56 @@ nav {
     background-color: #f7f7f7;
 }
 
-.page3-text{
+.page3-text {
     height: 60vh;
     display: flex;
     font-family: futura;
 }
-.text-left{
+
+.text-left {
     height: 90%;
     width: 70%;
     display: flex;
     align-items: center;
 }
-.text-left h1{
+
+.text-left h1 {
     font-size: 4vw;
     width: 80%;
     line-height: 100%;
 }
-.text-right{
+
+.text-right {
     width: 30%;
     height: 100%;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
 }
-.text-right div{
+
+.text-right div {
     height: 55%;
     display: flex;
     flex-direction: column;
     color: #454545;
     justify-content: space-between;
 }
-.text-right div h5{
+
+.text-right div h5 {
     font-size: 15px;
     font-weight: 600;
     width: 75%;
 }
-.text-right div h4{
+
+.text-right div h4 {
     font-size: 13px;
     position: relative;
     width: 140px;
     cursor: pointer;
-    
+
 }
-.text-right div h4::before{
+
+.text-right div h4::before {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -299,14 +317,15 @@ nav {
     width: 100%;
     background-color: black;
 }
-.text-right div h4:hover::before{
+
+.text-right div h4:hover::before {
     left: 100%;
     width: 0;
 }
 
 /* -------------------------------->  Page 3 complete <---------------------------------- */
 
-.page4{
+.page4 {
     min-height: 150vh;
     margin: 80px 0;
     width: 100%;
@@ -314,7 +333,8 @@ nav {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.child{
+
+.child {
     height: 80vh;
     width: 40vw;
     margin: 30px;
@@ -324,18 +344,25 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     color: #454545;
 }
-.child img{
+
+.child img {
     object-fit: contain;
     width: 100%;
     height: 90%;
 }
-.child div{
+
+.child div {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     font-weight: 100;
     align-items: center;
 }
+
+footer {
+    height: 50vh;
+}
+
 /* -------------------------------->  Responsiveness <---------------------------------- */
 
 @media screen and (max-width:800px) {
